@@ -1,3 +1,10 @@
+/*
+ * @Author       : lifan lifan@tuyoogame.com
+ * @Date         : 2024-09-23 20:20:27
+ * @LastEditors  : lifan lifan@tuyoogame.com
+ * @LastEditTime : 2024-09-24 20:22:05
+ * @Description  : 
+ */
 // structs3.rs
 //
 // Structs contain data, but can also have logic. In this exercise we have
@@ -7,7 +14,6 @@
 // Execute `rustlings hint structs3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 #[derive(Debug)]
 struct Package {
@@ -29,12 +35,12 @@ impl Package {
         }
     }
 
-    fn is_international(&self) -> ??? {
-        // Something goes here...
+    fn is_international(&self) -> bool {
+        return self.sender_country != self.recipient_country;
     }
 
-    fn get_fees(&self, cents_per_gram: i32) -> ??? {
-        // Something goes here...
+    fn get_fees(&self, cents_per_gram: i32) -> i32 {
+        return self.weight_in_grams * cents_per_gram;
     }
 }
 
